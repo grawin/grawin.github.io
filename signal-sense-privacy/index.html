@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Sense — Privacy Policy</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 680px; margin: 60px auto; padding: 0 24px; color: #1a1a1a; background: #fff; line-height: 1.6; }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    a { color: #0066cc; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #111; }
+      .meta { color: #999; }
+      a { color: #4da6ff; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Signal Sense — Privacy Policy</h1>
+  <p class="meta">Last updated: April 27, 2026</p>
+
+  <p>Signal Sense is a cellular and Wi-Fi signal monitoring utility for Android. This policy explains what data the app accesses and how it is handled.</p>
+
+  <h2>Data collected</h2>
+  <p>Signal Sense accesses the following information while in use:</p>
+  <ul>
+    <li><strong>Location</strong> — precise device location, used to correlate signal readings with geographic position.</li>
+    <li><strong>Cell signal metrics</strong> — carrier, network type, signal strength (RSRP, RSSI, RSRQ, SINR), and related radio measurements from all active SIMs.</li>
+    <li><strong>Wi-Fi signal metrics</strong> — SSID, BSSID, signal strength, and frequency band of nearby networks.</li>
+    <li><strong>Crash data</strong> — in the event of a crash, diagnostic information is collected including device model, Android version, app version, and stack trace. This is processed by Firebase Crashlytics (Google).</li>
+  </ul>
+
+  <h2>How data is used</h2>
+  <p>Signal and location data is stored locally on your device and used solely to display real-time signal information and maintain a signal log history within the app. Crash diagnostic data is transmitted to Firebase Crashlytics to help identify and fix stability issues.</p>
+
+  <h2>Data sharing</h2>
+  <p>Signal Sense does not sell your data. Crash diagnostics are shared with Google via Firebase Crashlytics solely for app stability purposes. No advertising SDKs or analytics SDKs are included. Google's privacy policy applies to data processed by Firebase: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Signal logs are stored in a local database on your device. You can clear the log history at any time from within the app. Uninstalling the app removes all stored data.</p>
+
+  <h2>Permissions</h2>
+  <p>The app requests the following Android permissions:</p>
+  <ul>
+    <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — required by Android to read cell and Wi-Fi signal data.</li>
+    <li><strong>ACCESS_BACKGROUND_LOCATION</strong> — required to continue logging when the app is not in the foreground.</li>
+    <li><strong>READ_PHONE_STATE / READ_PRECISE_PHONE_STATE</strong> — required to access detailed cell signal metrics and SIM information.</li>
+    <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_LOCATION</strong> — used to run the background monitoring service.</li>
+  </ul>
+  <p>All permissions are used solely for signal monitoring within the app.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Signal Sense is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes materially, the updated version will be posted at this URL with a revised date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or data requests: <a href="mailto:grawinapps@gmail.com">grawinapps@gmail.com</a></p>
+
+  <p style="margin-top: 3rem; color: #888; font-size: 0.85rem;"><a href="/">← Grawin Apps</a></p>
+</body>
+</html>
