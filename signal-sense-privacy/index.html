@@ -23,49 +23,70 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: April 27, 2026</p>
+    <p class="last-updated">Last updated: May 1, 2026</p>
 
     <section>
-        <p>Signal Sense ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <p>Signal Sense ("we," "us," or "our") is committed to protecting your privacy. Signal Sense is a local-first signal monitoring and network diagnostics application. This Privacy Policy explains what information the app accesses, how it is used, and what leaves your device.</p>
     </section>
 
     <section>
         <h2>Information We Collect</h2>
-        <p>Signal Sense accesses and displays technical data directly from your device's modem and hardware to provide signal monitoring services:</p>
+        <p>Signal Sense accesses and displays technical data directly from your device's modem, radios, sensors, and Android system APIs to provide live diagnostics while you use the app:</p>
         <ul>
-            <li><strong>Precise Location:</strong> Required to map signal strength and identify nearby cell towers/Wi-Fi networks.</li>
-            <li><strong>Cellular Metrics:</strong> Signal strength (RSRP, RSRQ, RSSI), carrier information, and cell identifiers (PCI, TAC, CID).</li>
-            <li><strong>Wi-Fi Metrics:</strong> SSID, BSSID, frequency, and congestion levels.</li>
-            <li><strong>Usage Analytics:</strong> Anonymous data regarding how the app is used (e.g., screens viewed, feature interactions).</li>
-            <li><strong>Performance Data:</strong> Technical metrics such as app start-up time and network latency to help us optimize the app.</li>
+            <li><strong>Location:</strong> GPS position, accuracy, motion, and satellite information. Location also helps associate readings with nearby Wi-Fi and cell tower context.</li>
+            <li><strong>Cellular and SIM Data:</strong> Signal strength and quality metrics such as RSRP, RSRQ, RSSI, SINR, CQI, carrier, network type, serving and neighbor cell information, and cell identifiers such as PCI, TAC, CID, PLMN, and subscription ID.</li>
+            <li><strong>Phone and SIM Identifiers:</strong> Where Android allows access, the app may display phone number/MSISDN, IMSI, ICCID, IMEI, carrier, and SIM/subscription details for local network diagnostics.</li>
+            <li><strong>Wi-Fi Metrics:</strong> Current connection and nearby network details such as SSID, BSSID, RSSI, frequency, channel, security type, link speed, and congestion levels.</li>
+            <li><strong>Device Diagnostics:</strong> Battery, memory, storage, display, sensor, camera, processor, Android version, and related device context.</li>
+            <li><strong>Network Diagnostics:</strong> Ping, traceroute, subnet scan, and speed test results when you run those tools.</li>
+            <li><strong>Optional Usage Analytics:</strong> If enabled, app usage events such as screen views and feature interactions.</li>
+            <li><strong>Optional Crash and Performance Data:</strong> If enabled, crash reports, stack traces, device model, OS version, app version, performance timing, and crash context.</li>
         </ul>
     </section>
 
     <section>
         <h2>How We Use Information</h2>
         <ul>
-            <li><strong>Local Display:</strong> Signal and location data are primarily processed and stored locally on your device for real-time visualization and history logs.</li>
-            <li><strong>App Improvement:</strong> Anonymous usage and performance data help us identify bugs and improve the user experience.</li>
-            <li><strong>Crash Reporting:</strong> We use anonymized reports to identify and fix technical issues.</li>
+            <li><strong>Live Diagnostics:</strong> Signal, Wi-Fi, GPS, and device data are used to display live diagnostics while you use the app.</li>
+            <li><strong>Background Monitoring:</strong> Signal Sense does not continuously log in the background during normal use. Ongoing signal history is collected only when you turn on Background Monitoring. Background Monitoring runs as a foreground service with a persistent notification.</li>
+            <li><strong>Local History:</strong> When Background Monitoring is enabled, the app stores cell signal, carrier/network type, Wi-Fi SSID/RSSI, location, accuracy, and timestamps in an on-device database. Monitoring entries older than 24 hours are automatically purged.</li>
+            <li><strong>User-Initiated Exports:</strong> Logs, NMEA records, and diagnostic summaries leave the device only when you explicitly export, copy, or share them.</li>
+            <li><strong>App Improvement:</strong> Optional usage analytics and performance data help identify confusing workflows and performance issues.</li>
+            <li><strong>Crash Reporting:</strong> Optional crash reports help identify and fix technical issues.</li>
         </ul>
     </section>
 
     <section>
         <h2>Third-Party Services</h2>
-        <p>We use Google Firebase to improve app stability and performance. The following services are included:</p>
+        <p>Signal Sense may use Google Firebase to improve app stability and performance. Firebase collection is optional and controlled by you in the app:</p>
         <ul>
-            <li><strong>Firebase Analytics:</strong> Helps us understand how users interact with the app.</li>
-            <li><strong>Firebase Crashlytics:</strong> Provides anonymized crash reports.</li>
-            <li><strong>Firebase Performance Monitoring:</strong> Monitors app responsiveness.</li>
+            <li><strong>Firebase Analytics:</strong> If enabled, helps us understand app usage through events such as screen views and feature interactions.</li>
+            <li><strong>Firebase Crashlytics:</strong> If enabled, provides crash reports and stack traces.</li>
+            <li><strong>Firebase Performance Monitoring:</strong> If enabled, monitors app responsiveness and performance timing.</li>
         </ul>
+        <p>Signal logs, coordinates, exported files, phone numbers, and SIM/device identifiers are not intentionally attached to Firebase analytics events.</p>
         <div class="opt-out">
-            <strong>Your Choice:</strong> You can opt-out of Analytics, Crashlytics, and Performance data collection at any time by going to <strong>Settings > Privacy & Diagnostics</strong> within the app and toggling off "Usage Analytics & Crash Reports."
+            <strong>Your Choice:</strong> Optional telemetry is off unless you enable it. You can change Usage Analytics and Crash Reports at any time by going to <strong>Settings &gt; Privacy &amp; Diagnostics</strong> within the app.
         </div>
     </section>
 
     <section>
-        <h2>Data Security</h2>
-        <p>We do not sell your data. Signal logs and location history are stored locally on your device and are never transmitted to our servers. Only anonymized technical metrics mentioned in the "Third-Party Services" section are shared with Google Firebase.</p>
+        <h2>Data Storage and Sharing</h2>
+        <p>We do not sell your data. Signal logs and location history are stored locally on your device by default and are not transmitted to our servers. User-initiated exports and shares are controlled by you. Optional Firebase telemetry is the only built-in third-party transmission path.</p>
+        <p>You can clear stored signal logs in the app. Background Monitoring entries older than 24 hours are automatically purged.</p>
+    </section>
+
+    <section>
+        <h2>Permissions</h2>
+        <ul>
+            <li><strong>Location:</strong> Used for GPS diagnostics, Wi-Fi/cell context, and user-enabled signal history logging.</li>
+            <li><strong>Foreground Service Location:</strong> Used only for user-started Background Monitoring with a persistent notification.</li>
+            <li><strong>Notifications:</strong> Used to show the foreground monitoring notification.</li>
+            <li><strong>Phone State and Phone Numbers:</strong> Used for SIM/subscription state, radio state, network diagnostics, and line information where Android permits access.</li>
+            <li><strong>Nearby Wi-Fi Devices and Network State:</strong> Used for Wi-Fi diagnostics and connection details.</li>
+            <li><strong>Internet:</strong> Used for network diagnostics such as ping, traceroute, subnet scanning, speed tests, privacy policy access, and optional Firebase telemetry.</li>
+        </ul>
+        <p>Signal Sense does not request Android's background location permission. Background Monitoring uses while-in-use location access through a foreground service that you start manually.</p>
     </section>
 
     <section>
